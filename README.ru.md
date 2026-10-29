@@ -3,12 +3,12 @@
 **🌐 Language / 语言 / Язык:** [English](README.md) · [简体中文](README.zh-CN.md) · [Русский](README.ru.md)
 
 ![Status](https://img.shields.io/badge/status-🟢_live-2ea44f?style=flat-square)
-[![Engine](https://img.shields.io/badge/engine-shared_core-6e40c9?style=flat-square)](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits)
+[![Engine](https://img.shields.io/badge/engine-shared_core-6e40c9?style=flat-square)](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=flat-square&logo=rust)](https://www.rust-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
-[![CI](https://github.com/HarrierOnChain/Augur/actions/workflows/ci.yml/badge.svg)](https://github.com/HarrierOnChain/Augur/actions/workflows/ci.yml)
+[![CI](https://github.com/tarpboi/Augur/actions/workflows/ci.yml/badge.svg)](https://github.com/tarpboi/Augur/actions/workflows/ci.yml)
 
-> Автоматический **торговый бот Augur** — Ethereum. Часть набора [Prediction Market Toolkits](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits): одно ядро исполнения, один слой риска, все площадки.
+> Автоматический **торговый бот Augur** — Ethereum. Часть набора [Prediction Market Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits): одно ядро исполнения, один слой риска, все площадки.
 
 **Augur** уже **работает в продакшене** сегодня.
 
@@ -36,7 +36,7 @@
 | 🎯 **Снайпер разрешения** — околоуверенность 95¢ → гарантированная выплата $1.00 |
 | 📊 **Дисбаланс стакана** — сигнал *и есть* стакан заявок, без внешних фидов |
 
-> Нужна стратегия, не указанная здесь для Augur? Покрытие адаптеров определяется спросом — [напишите](https://t.me/HarrierOnChain).
+> Нужна стратегия, не указанная здесь для Augur? Покрытие адаптеров определяется спросом — [напишите](https://t.me/tarpboi).
 
 ---
 
@@ -45,7 +45,7 @@
 Клонируйте, добавьте ключи и запустите — TUI даст выбрать стратегию.
 
 ```bash
-git clone https://github.com/HarrierOnChain/Augur.git
+git clone https://github.com/tarpboi/Augur.git
 cd Augur
 cp config.example.yaml config.yaml   # add your keys
 cargo run --release                  # launch the TUI
@@ -58,7 +58,7 @@ cargo run --release                  # launch the TUI
 
 Этот репозиторий — точка входа для **Augur**. Ядро исполнения, слой риска и все 20+ адаптеров площадок находятся в основном наборе:
 
-### 👉 **[Prediction-Markets-Trading-Bot-Toolkits](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits)** — полный набор
+### 👉 **[Prediction-Markets-Trading-Bot-Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)** — полный набор
 
 | | |
 |---|---|
@@ -75,9 +75,9 @@ cargo run --release                  # launch the TUI
 
 | Платформа | Ссылка |
 |----------|------|
-| **Полный набор** | [Prediction-Markets-Trading-Bot-Toolkits](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits) |
-| **Telegram** | [@HarrierOnChain](https://t.me/HarrierOnChain) |
-| **Обсуждения** | [GitHub Discussions](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits/discussions) |
+| **Полный набор** | [Prediction-Markets-Trading-Bot-Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits) |
+| **Telegram** | [@tarpboi](https://t.me/tarpboi) |
+| **Обсуждения** | [GitHub Discussions](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits/discussions) |
 
 *Обычно отвечаем в течение нескольких часов.*
 
@@ -85,9 +85,9 @@ cargo run --release                  # launch the TUI
 
 ## Связанные площадки
 
-[Kalshi](https://github.com/HarrierOnChain/Kalshi) · [Limitless](https://github.com/HarrierOnChain/Limitless-Exchange) · [Polymarket](https://github.com/HarrierOnChain/Polymarket) · [Azuro](https://github.com/HarrierOnChain/Azuro)
+[Kalshi](https://github.com/tarpboi/Kalshi) · [Limitless](https://github.com/tarpboi/Limitless-Exchange) · [Polymarket](https://github.com/tarpboi/Polymarket) · [Azuro](https://github.com/tarpboi/Azuro)
 
-> Полный каталог площадок — в [основном наборе →](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits#venue-coverage)
+> Полный каталог площадок — в [основном наборе →](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits#venue-coverage)
 
 ---
 
@@ -99,8 +99,8 @@ cargo run --release                  # launch the TUI
 
 <div align="center">
 
-**Торговый бот Augur · построен на движке [Prediction Market Toolkits](https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits)**
+**Торговый бот Augur · построен на движке [Prediction Market Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)**
 
-[![Telegram](https://img.shields.io/badge/Telegram-@HarrierOnChain-26A5E4?style=flat-square&logo=telegram)](https://t.me/HarrierOnChain)
+[![Telegram](https://img.shields.io/badge/Telegram-@tarpboi-26A5E4?style=flat-square&logo=telegram)](https://t.me/tarpboi)
 
 </div>
