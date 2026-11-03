@@ -2,34 +2,20 @@
 
 **🌐 Language / 语言 / Язык:** [English](README.md) · [简体中文](README.zh-CN.md) · [Русский](README.ru.md)
 
-![Status](https://img.shields.io/badge/status-🟢_live-2ea44f?style=flat-square)
 [![Engine](https://img.shields.io/badge/engine-shared_core-6e40c9?style=flat-square)](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=flat-square&logo=rust)](https://www.rust-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 [![CI](https://github.com/tarpboi/Augur/actions/workflows/ci.yml/badge.svg)](https://github.com/tarpboi/Augur/actions/workflows/ci.yml)
 
-> Automated **Augur trading bot** — Ethereum. Part of the [Prediction Market Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits) suite: one execution core, one risk layer, every venue.
+> **Augur trading bot** — Ethereum. Part of the [Prediction Market Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits) suite: one execution core, one risk layer, every venue.
 
-**Augur** is **live in production today.**
-
----
-
-## Live on Augur
-
-<div align="center">
-
-<img width="820" alt="Augur trading bot TUI" src="https://github.com/user-attachments/assets/b6c51ba1-14c6-4582-858c-e9441516dd1d" />
-<img width="820" alt="Augur trading bot TUI" src="https://github.com/user-attachments/assets/66d9cb72-e14a-414f-93e5-600fb1d3f49f" />
-
-<sub>The shared TUI running against Augur — live positions, P&L, and circuit-breaker state. <!-- TODO: swap in Augur-specific captures --></sub>
-
-</div>
+**Augur** is mapped to the shared engine, but its adapter isn't wired yet. This repo holds venue metadata; the trading code lives in the main toolkit, which executes on Polymarket today.
 
 ---
 
 ## Strategies on Augur
 
-These bots run on Augur through a single venue adapter on the shared engine — same risk controls, same TUI, full dry-run support.
+These are the strategies mapped to Augur. They run here once its adapter is wired — same risk controls, same TUI, full dry-run support.
 
 | Strategy |
 |----------|
@@ -42,21 +28,20 @@ These bots run on Augur through a single venue adapter on the shared engine — 
 
 ## Quickstart
 
-Clone, drop in your keys, and run — the TUI lets you pick a strategy.
+The trading code lives in the main toolkit. Clone it, add your keys, and start in dry-run. It runs against Polymarket today.
 
 ```bash
-git clone https://github.com/tarpboi/Augur.git
-cd Augur
-cp config.example.yaml config.yaml   # add your keys
-cargo run --release                  # launch the TUI
-# headless: cargo run --release -- run copy-trading
+git clone https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits.git
+cd Prediction-Markets-Trading-Bot-Toolkits
+cp config.yaml.example config.yaml        # add your keys
+cargo run --release -- run copy-trading   # dry-run: enable_trading is false by default
 ```
 
 ---
 
 ## One engine, every venue
 
-This repo is the **Augur** entry point. The execution core, risk layer, and all 20+ venue adapters live in the main toolkit:
+The execution core and risk layer live in the main toolkit:
 
 ### 👉 **[Prediction-Markets-Trading-Bot-Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)** — the full suite
 
@@ -65,7 +50,7 @@ This repo is the **Augur** entry point. The execution core, risk layer, and all 
 | **Order execution** | < 100ms end-to-end |
 | **Event processing** | < 1ms per event |
 | **Safety** | Circuit breaker · depth guard · dry-run · trade floor |
-| **Venues** | 7 live today · 20+ venues |
+| **Venues** | 21 venues mapped |
 
 Adding a venue means writing **one adapter** — not rebuilding a bot.
 
@@ -85,7 +70,7 @@ Adding a venue means writing **one adapter** — not rebuilding a bot.
 
 ## Related venues
 
-[Kalshi](https://github.com/tarpboi/Kalshi) · [Limitless](https://github.com/tarpboi/Limitless-Exchange) · [Polymarket](https://github.com/tarpboi/Polymarket) · [Azuro](https://github.com/tarpboi/Azuro)
+[Kalshi](https://github.com/tarpboi/Kalshi) · [Limitless](https://github.com/tarpboi/Limitless-Exchange) · [Polymarket](https://github.com/tarpboi/Polymarket) · [Predict.fun](https://github.com/tarpboi/Predict.fun)
 
 > Browse the full venue directory in the [main toolkit →](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits#venue-coverage)
 

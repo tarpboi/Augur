@@ -9,7 +9,7 @@ pub const NAME: &str = "Augur";
 /// Venue category.
 pub const VENUE_TYPE: &str = "Ethereum";
 
-/// Strategies this venue runs on the shared engine.
+/// Strategies mapped to this venue on the shared engine.
 pub const STRATEGIES: &[&str] = &[
     "Resolution Sniper",
     "Orderbook Imbalance",

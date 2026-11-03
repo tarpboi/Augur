@@ -2,34 +2,20 @@
 
 **🌐 Language / 语言 / Язык:** [English](README.md) · [简体中文](README.zh-CN.md) · [Русский](README.ru.md)
 
-![Status](https://img.shields.io/badge/status-🟢_live-2ea44f?style=flat-square)
 [![Engine](https://img.shields.io/badge/engine-shared_core-6e40c9?style=flat-square)](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)
 [![Rust](https://img.shields.io/badge/rust-1.70+-orange.svg?style=flat-square&logo=rust)](https://www.rust-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 [![CI](https://github.com/tarpboi/Augur/actions/workflows/ci.yml/badge.svg)](https://github.com/tarpboi/Augur/actions/workflows/ci.yml)
 
-> Автоматический **торговый бот Augur** — Ethereum. Часть набора [Prediction Market Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits): одно ядро исполнения, один слой риска, все площадки.
+> **Торговый бот Augur** — Ethereum. Часть набора [Prediction Market Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits): одно ядро исполнения, один слой риска, все площадки.
 
-**Augur** уже **работает в продакшене** сегодня.
-
----
-
-## Augur в реальной торговле
-
-<div align="center">
-
-<img width="820" alt="Augur trading bot TUI" src="https://github.com/user-attachments/assets/b6c51ba1-14c6-4582-858c-e9441516dd1d" />
-<img width="820" alt="Augur trading bot TUI" src="https://github.com/user-attachments/assets/66d9cb72-e14a-414f-93e5-600fb1d3f49f" />
-
-<sub>Общий TUI в работе на Augur — позиции в реальном времени, P&L и состояние предохранителя. <!-- TODO: swap in Augur-specific captures --></sub>
-
-</div>
+Площадка **Augur** сопоставлена с общим движком, но её адаптер пока не подключён. Этот репозиторий хранит метаданные площадки; торговый код находится в основном наборе, который сегодня исполняет сделки на Polymarket.
 
 ---
 
 ## Стратегии на Augur
 
-Эти боты работают на Augur через один адаптер площадки на общем движке — те же риск-контроли, тот же TUI, полная поддержка dry-run.
+Это стратегии, сопоставленные с Augur. Они заработают здесь, когда адаптер будет подключён — те же риск-контроли, тот же TUI, полная поддержка dry-run.
 
 | Стратегия |
 |----------|
@@ -42,21 +28,20 @@
 
 ## Быстрый старт
 
-Клонируйте, добавьте ключи и запустите — TUI даст выбрать стратегию.
+Торговый код находится в основном наборе. Клонируйте его, добавьте ключи и начните с dry-run. Сегодня он работает с Polymarket.
 
 ```bash
-git clone https://github.com/tarpboi/Augur.git
-cd Augur
-cp config.example.yaml config.yaml   # add your keys
-cargo run --release                  # launch the TUI
-# headless: cargo run --release -- run copy-trading
+git clone https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits.git
+cd Prediction-Markets-Trading-Bot-Toolkits
+cp config.yaml.example config.yaml        # add your keys
+cargo run --release -- run copy-trading   # dry-run: enable_trading is false by default
 ```
 
 ---
 
 ## Один движок, все площадки
 
-Этот репозиторий — точка входа для **Augur**. Ядро исполнения, слой риска и все 20+ адаптеров площадок находятся в основном наборе:
+Ядро исполнения и слой риска находятся в основном наборе:
 
 ### 👉 **[Prediction-Markets-Trading-Bot-Toolkits](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits)** — полный набор
 
@@ -65,7 +50,7 @@ cargo run --release                  # launch the TUI
 | **Исполнение ордеров** | < 100 мс от начала до конца |
 | **Обработка событий** | < 1 мс на событие |
 | **Безопасность** | Предохранитель · защита глубины · dry-run · минимум сделки |
-| **Площадки** | 7 активны · 20+ площадок |
+| **Площадки** | Сопоставлено площадок: 21 |
 
 Добавить площадку — значит написать **один адаптер**, а не пересобирать бота.
 
@@ -85,7 +70,7 @@ cargo run --release                  # launch the TUI
 
 ## Связанные площадки
 
-[Kalshi](https://github.com/tarpboi/Kalshi) · [Limitless](https://github.com/tarpboi/Limitless-Exchange) · [Polymarket](https://github.com/tarpboi/Polymarket) · [Azuro](https://github.com/tarpboi/Azuro)
+[Kalshi](https://github.com/tarpboi/Kalshi) · [Limitless](https://github.com/tarpboi/Limitless-Exchange) · [Polymarket](https://github.com/tarpboi/Polymarket) · [Predict.fun](https://github.com/tarpboi/Predict.fun)
 
 > Полный каталог площадок — в [основном наборе →](https://github.com/tarpboi/Prediction-Markets-Trading-Bot-Toolkits#venue-coverage)
 
