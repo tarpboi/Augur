@@ -19,7 +19,7 @@ These are the strategies mapped to Augur. They run here once its adapter is wire
 
 | Strategy |
 |----------|
-| 🎯 **Resolution Sniper** — 95¢ near-certainty → guaranteed $1.00 payout |
+| 🎯 **Resolution Sniper** — buy near-certain outcomes about to end, hold to the payout |
 | 📊 **Orderbook Imbalance** — the signal *is* the order book, no external feeds |
 
 > Want a strategy not listed here on Augur? Adapter coverage is demand-driven — [ask](https://t.me/tarpboi).
